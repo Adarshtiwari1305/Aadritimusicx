@@ -133,7 +133,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 photo=image,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 caption=f"✨ **ᴛʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ Qᴜᴇᴜᴇ »** `{pos}`\n\n"
-                        f"🎭 **ɴᴀᴍᴇ:** [{songname}]({link}) | `music`\n"
+                        f"🎭 **ɴᴀᴍᴇ:** [{songname}]({link})\n"
                         f"⏱️ **ᴅᴜʀᴀᴛɪᴏɴ:** `{duration}`\n"
                         f"🎄 **ʀᴇQᴜᴇꜱᴛ ʙʏ:** {requester}",
             )
@@ -145,7 +145,7 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
                 title = songname
                 userid = m.from_user.id
                 image = await thumb(thumbnail, title, userid, ctitle)
-                await suhu.edit("🔄 Joining Group Call...")
+                await suhu.edit("🔄 ᴊᴏɪɴɪɴɢ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ...")
                 await music_on(chat_id)
                 await add_active_chat(chat_id)
                 await calls.join_group_call(
@@ -435,7 +435,7 @@ async def live_music_stream(c: Client, m: Message):
         await m.reply_text("» Give me a youtube live url/m3u8 url to stream.")
     else:
         url = m.text.split(None, 1)[1]
-        msg = await m.reply_text("🔍 **Loading...**")
+        msg = await m.reply_text("🔍 **ꜱᴇᴀʀᴄʜɪɴɢ ꜱᴏɴɢ...**")
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, url)
         if match:
