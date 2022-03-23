@@ -85,13 +85,13 @@ async def play_tg_file(c: Client, m: Message, replied: Message = None, link: str
             return await m.reply_text(f"🚫 error:\n\n» {e}")
     if not replied:
         return await m.reply(
-            "» reply to an **audio file** or **give something to search.**"
+            "» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ **ᴀᴜᴅɪᴏ ꜰɪʟᴇ** ᴏʀ **ɢɪᴠᴇ ꜱᴏᴍᴇᴛʜɪɴɢ ᴛᴏ ꜱᴇᴀʀᴄʜ.**"
         )
     if replied.audio or replied.voice:
         if not link:
-            suhu = await replied.reply("📥 downloading audio...")
+            suhu = await replied.reply("📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴀᴜᴅɪᴏ...")
         else:
-            suhu = await m.reply("📥 downloading audio...")
+            suhu = await m.reply("📥 ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴀᴜᴅɪᴏ...")
         dl = await replied.download()
         link = replied.link
         songname = "music"
@@ -238,7 +238,7 @@ async def audio_stream(c: Client, m: Message):
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "» reply to an **audio file** or **give something to search.**"
+                    "» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ **ᴀᴜᴅɪᴏ ꜰɪʟᴇ** ᴏʀ **ɢɪᴠᴇ ꜱᴏᴍᴇᴛʜɪɴɢ ᴛᴏ ꜱᴇᴀʀᴄʜ.**"
                 )
             else:
                 suhu = await c.send_message(chat_id, "🔍 **ꜱᴇᴀʀᴄʜɪɴɢ ꜱᴏɴɢ...**")
@@ -310,7 +310,7 @@ async def audio_stream(c: Client, m: Message):
     else:
         if len(m.command) < 2:
             await m.reply(
-                "» reply to an **audio file** or **give something to search.**"
+                "» ʀᴇᴘʟʏ ᴛᴏ ᴀɴ **ᴀᴜᴅɪᴏ ꜰɪʟᴇ** ᴏʀ **ɢɪᴠᴇ ꜱᴏᴍᴇᴛʜɪɴɢ ᴛᴏ ꜱᴇᴀʀᴄʜ.**"
             )
         elif "t.me" in m.command[1]:
             for i in m.command[1:]:
@@ -322,7 +322,7 @@ async def audio_stream(c: Client, m: Message):
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
-                await suhu.edit("❌ **no results found**")
+                await suhu.edit("❌ **ɴᴏ ʀᴇꜱᴜʟᴛꜱ ꜰᴏᴜɴᴅ**")
             else:
                 songname = search[0]
                 title = search[0]
@@ -398,7 +398,7 @@ async def live_music_stream(c: Client, m: Message):
         b = await c.get_chat_member(chat_id, ubot)
         if b.status == "banned":
             try:
-                await m.reply_text("❌ The userbot is banned in this chat, unban the userbot first to be able to play music !")
+                await m.reply_text("❌ ᴛʜᴇ ᴜꜱᴇʀʙᴏᴛ ɪꜱ ʙᴀɴɴᴇᴅ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ, ᴜɴʙᴀɴ ᴛʜᴇ ᴜꜱᴇʀʙᴏᴛ ꜰɪʀꜱᴛ ᴛᴏ ʙᴇ ᴀʙʟᴇ ᴛᴏ ᴘʟᴀʏ ᴍᴜꜱɪᴄ !")
                 await remove_active_chat(chat_id)
             except BaseException:
                 pass
