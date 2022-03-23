@@ -25,8 +25,8 @@ from pytgcalls.types import Update
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="stream_menu_panel"),
-            InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="set_close"),
+            InlineKeyboardButton(text="• Sᴜᴘᴘᴏʀᴛ",  url=f"https://t.me/AlishaSupport"),
+            InlineKeyboardButton(text="• Uᴘᴅᴀᴛᴇꜱ", url=f"https://t.me/Pubglovers_Shayri_lovers"),
         ]
     ]
 )
@@ -136,7 +136,7 @@ async def stream_end_handler(_, u: Update):
         else:
             await bot.send_message(
                 chat_id,
-                f"💡 **Streaming next track**\n\n🗂 **Name:** [{queue[0]}]({queue[1]}) | `{queue[2]}`\n💭 **Chat:** `{chat_id}`",
+                f"💡 ****\n\n🗂 **Name:** [{queue[0]}]({queue[1]}) | `{queue[2]}`\n💭 **Chat:** `{chat_id}`",
                 disable_web_page_preview=True,
                 reply_markup=keyboard,
             )
