@@ -34,10 +34,10 @@ from config import (
 )
 
 
-@Client.on_callback_query(filters.regex("home_start"))
+@Client.on_callback_query(filters.regex("start"))
 @check_blacklist()
 async def start_set(_, query: CallbackQuery):
-    await query.answer("home start")
+    await query.answer("start")
     await query.edit_message_text(
         f"""Hi [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) 👋🏻\n
 💭 [{me_bot.first_name}](https://t.me/{me_bot.username}) is a bot to play music and video in groups, through the new Telegram video chats.
@@ -59,7 +59,7 @@ async def start_set(_, query: CallbackQuery):
                     InlineKeyboardButton("👥 Support Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                     InlineKeyboardButton("📣 Support Channel", url=f"https://t.me/{UPDATES_CHANNEL}")
                 ],[
-                    InlineKeyboardButton("🌐 Source Code", url="https://github.com/levina-lab/video-stream")
+                    InlineKeyboardButton("🌐 Source Code", url="https://github.com/CandyMusic/RhythmMusic")
                 ],
             ]
         ),
