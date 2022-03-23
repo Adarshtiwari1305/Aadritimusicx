@@ -56,7 +56,7 @@ async def update_admin(client, message: Message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot **reloaded** correctly!\n✅ The **Admin list** has **updated.**"
+        "✅ Rʜʏᴛʜᴍ ʙᴏᴛ **ʀᴇʟᴏᴀᴅᴇᴅ** ᴄᴏʀʀᴇᴄᴛʟʏ!\n✅ ᴛʜᴇ **ᴀᴅᴍɪɴ ʟɪSᴛ** ʜᴀS ʙᴇᴇɴ **ᴜᴘᴅᴀᴛᴇᴅ.**"
     )
 
 
@@ -73,12 +73,12 @@ async def stop(client, m: Message):
             await calls.leave_group_call(chat_id)
             await remove_active_chat(chat_id)
             clear_queue(chat_id)
-            await m.reply_text("✅ The userbot has disconnected from the video chat.")
+            await m.reply_text("✅ ᴛʜᴇ ᴜꜱᴇʀʙᴏᴛ ʜᴀꜱ ᴅɪꜱᴄᴏɴɴᴇᴄᴛᴇᴅ ꜰʀᴏᴍ ᴛʜᴇ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ.")
         except Exception as e:
             traceback.print_exc()
             await m.reply_text(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply_text("❌ **nothing is streaming**")
+        await m.reply_text("❌ **ɴᴏᴛʜɪɴɢ ɪꜱ ꜱᴛʀᴇᴀᴍɪɴɢ**")
 
 
 @Client.on_message(
@@ -91,17 +91,17 @@ async def pause(client, m: Message):
     if chat_id in QUEUE:
         try:
             if not await is_music_playing(chat_id):
-                return await m.reply_text("ℹ️ The music is already paused.")
+                return await m.reply_text("ℹ️ ᴛʜᴇ ᴍᴜꜱɪᴄ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴘᴀᴜꜱᴇᴅ.")
             await calls.pause_stream(chat_id)
             await music_off(chat_id)
             await m.reply_text(
-                "⏸ **Track paused.**\n\n• **To resume the stream, use the**\n» /resume command."
+                "⏸ **ᴛʀᴀᴄᴋ ᴘᴀᴜꜱᴇᴅ.**\n\n• **ᴛᴏ ʀᴇꜱᴜᴍᴇ ᴛʜᴇ ꜱᴛʀᴇᴀᴍ, ᴜꜱᴇ ᴛʜᴇ**\n» /Resume ᴄᴏᴍᴍᴀɴᴅ."
             )
         except Exception as e:
             traceback.print_exc()
             await m.reply_text(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply_text("❌ **nothing is streaming**")
+        await m.reply_text("❌ **ɴᴏᴛʜɪɴɢ ɪꜱ ꜱᴛʀᴇᴀᴍɪɴɢ**")
 
 
 @Client.on_message(
@@ -114,17 +114,17 @@ async def resume(client, m: Message):
     if chat_id in QUEUE:
         try:
             if await is_music_playing(chat_id):
-                return await m.reply_text("ℹ️ The music is already resumed.")
+                return await m.reply_text("ℹ️ ᴛʜᴇ ᴍᴜꜱɪᴄ ɪꜱ ᴀʟʀᴇᴀᴅʏ ʀᴇꜱᴜᴍᴇᴅ.")
             await calls.resume_stream(chat_id)
             await music_on(chat_id)
             await m.reply_text(
-                "▶️ **Track resumed.**\n\n• **To pause the stream, use the**\n» /pause command."
+                "▶️ **ᴛʀᴀᴄᴋ ᴘᴀᴜꜱᴇᴅ.**\n\n• **ᴛᴏ ᴘᴀᴜꜱᴇ ᴛʜᴇ ꜱᴛʀᴇᴀᴍ, ᴜꜱᴇ ᴛʜᴇ**\n» /pause ᴄᴏᴍᴍᴀɴᴅ."
             )
         except Exception as e:
             traceback.print_exc()
             await m.reply_text(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply_text("❌ **nothing is streaming**")
+        await m.reply_text("❌ **ɴᴏᴛʜɪɴɢ ɪꜱ ᴘʟᴀʏɪɴɢ**")
 
 
 @Client.on_message(command(["skip", f"skip@{BOT_USERNAME}", "vskip"]) & other_filters)
@@ -137,7 +137,7 @@ async def skip(c: Client, m: Message):
     if queue == 0:
         await m.reply_text("❌ nothing is currently playing")
     elif queue == 1:
-        await m.reply_text("» There's no more music in queue to skip, userbot leaving video chat.")
+        await m.reply_text("» ᴛʜᴇʀᴇ'ꜱ ɴᴏ ᴍᴏʀᴇ ᴍᴜꜱɪᴄ ɪɴ Qᴜᴇᴜᴇ ᴛᴏ ꜱᴋɪᴘ, ᴜꜱᴇʀʙᴏᴛ ʟᴇᴀᴠɪɴɢ ᴠɪᴅᴇᴏ ᴄʜᴀᴛ.")
     elif queue == 2:
         await m.reply_text("🗑️ Clearing the **queues**\n\n» **userbot** leaving video chat.")
     else:
@@ -153,7 +153,7 @@ async def skip(c: Client, m: Message):
             chat_id,
             photo=image,
             reply_markup=InlineKeyboardMarkup(buttons),
-            caption=f"⏭ **Skipped** to the next track.\n\n🗂 **Name:** [{queue[0]}]({queue[1]})\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
+            caption=f"⏭ **ꜱᴋɪᴘᴘᴇᴅ** ᴛᴏ ᴛʜᴇ ɴᴇxᴛ ᴛʀᴀᴄᴋ.\n\n🎭 **ɴᴀᴍᴇ:** [{queue[0]}]({queue[1]})\n💭 **ᴄʜᴀᴛ:** `{chat_id}`\n✨ **ʀᴇQᴜᴇꜱᴛ ʙʏ:** {requester}",
         )
         remove_if_exists(image)
 
@@ -370,6 +370,6 @@ async def cbskip(_, query: CallbackQuery):
             chat_id,
             photo=image,
             reply_markup=InlineKeyboardMarkup(buttons),
-            caption=f"⏭ **Skipped** to the next track.\n\n🗂 **Name:** [{queue[0]}]({queue[1]})\n💭 **Chat:** `{chat_id}`\n🧸 **Request by:** {requester}",
+            caption=f"⏭ **ꜱᴋɪᴘᴘᴇᴅ** ᴛᴏ ᴛʜᴇ ɴᴇxᴛ ᴛʀᴀᴄᴋ.\n\n🎭 **ɴᴀᴍᴇ:** [{queue[0]}]({queue[1]})\n💭 **ᴄʜᴀᴛ:** `{chat_id}`\n✨ **ʀᴇQᴜᴇꜱᴛ ʙʏ:** {requester}",
         )
         remove_if_exists(image)
