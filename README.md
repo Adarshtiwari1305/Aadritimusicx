@@ -1,17 +1,17 @@
-<p align="center"><a href="https://t.me/VeezVideoBot"><img src="https://github.com/levina-lab/video-stream/raw/main/driver/veezlogo.png"></a></p>
+<p align="center"><a href="https://t.me/Aadeiti_Music_Bot"><img src="https://github.com/Adarshtiwari1305/Aadritimusicx/raw/main/driver/veezlogo.png"></a></p>
 <p align="center">
     <br><b>Video Stream is an Open-Source Telegram Bot project that's allow you to play Video & Music trough the Telegram Group Video Chat</b><br>
 </p>
 <p align="center">
-    <a href="https://www.codefactor.io/repository/github/levina-lab/video-stream"> <img src="https://www.codefactor.io/repository/github/levina-lab/video-stream/badge?color=red&logo=codacy&style=flat-square" alt="CodeFactor" /></a>
-    <a href="https://app.codacy.com/gh/levina-lab/video-stream/dashboard"> <img src="https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=red&logo=codacy&style=flat-square" alt="Codacy" /></a>
+    <a href="https://www.codefactor.io/repository/github/Adarshtiwari1305/Aadritimusicx"> <img src="https://www.codefactor.io/repository/github/Adarshtiwari1305/Aadritimusicx/badge?color=red&logo=codacy&style=flat-square" alt="CodeFactor" /></a>
+    <a href="https://app.codacy.com/gh/Adarshtiwari1305/Aadritimusicx/dashboard"> <img src="https://img.shields.io/codacy/grade/a723cb464d5a4d25be3152b5d71de82d?color=red&logo=codacy&style=flat-square" alt="Codacy" /></a>
     <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-black.svg?style=flat-square&logo=python&logoColor=blue&color=red" /></a>
-    <a href="https://github.com/levina-lab/video-stream/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a><br>
-    <a href="https://github.com/levina-lab/video-stream"> <img src="https://img.shields.io/github/repo-size/levina-lab/video-stream?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/levina-lab/video-stream/commits/main"> <img src="https://img.shields.io/github/last-commit/levina-lab/video-stream?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/levina-lab/video-stream/issues"> <img src="https://img.shields.io/github/issues/levina-lab/video-stream?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/levina-lab/video-stream/network/members"> <img src="https://img.shields.io/github/forks/levina-lab/video-stream?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
-    <a href="https://github.com/levina-lab/video-stream/network/members"> <img src="https://img.shields.io/github/stars/levina-lab/video-stream?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/Adarshtiwari1305/Aadritimusicx/graphs/commit-activity" alt="Maintenance"> <img src="https://img.shields.io/badge/Maintained%3F-yes-red.svg?style=flat-square" /></a><br>
+    <a href="https://github.com/Adarshtiwari1305/Aadritimusicx"> <img src="https://img.shields.io/github/repo-size/Adarshtiwari1305/Aadritimusicx?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/Adarshtiwari1305/Aadritimusicx/commits/main"> <img src="https://img.shields.io/github/last-commit/Adarshtiwari1305/Aadritimusicx?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/Adarshtiwari1305/Aadritimusicx/issues"> <img src="https://img.shields.io/github/issues/Adarshtiwari1305/Aadritimusicx?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/Adarshtiwari1305/Aadritimusicx/network/members"> <img src="https://img.shields.io/github/forks/Adarshtiwari1305/Aadritimusicx?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
+    <a href="https://github.com/Adarshtiwari1305/Aadritimusicx/network/members"> <img src="https://img.shields.io/github/stars/Adarshtiwari1305/Aadritimusicx?color=red&logo=github&logoColor=blue&style=flat-square" /></a>
 </p>
 
 ## Deployment
